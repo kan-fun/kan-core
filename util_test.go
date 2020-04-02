@@ -7,6 +7,6 @@ import (
 )
 
 func TestIsAllWhiteChar(t *testing.T) {
-	assert.Equal(t, true, isAllWhiteChar(" 	 "))
-	assert.Equal(t, false, isAllWhiteChar(" 	6 "))
+	assert.Equal(t, true, IsAllWhiteChar(" 	 "))
+	assert.Equal(t, false, IsAllWhiteChar(" 	6 "))
 }
