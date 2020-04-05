@@ -50,6 +50,9 @@ type CommonParameter struct {
 
 func prepareStringForSign(commonParameter CommonParameter, specificParameter map[string]string) string {
 	commonParameterString := fmt.Sprintf("%s&%s&%s", commonParameter.AccessKey, commonParameter.SignatureNonce, commonParameter.Timestamp)
+	if len(specificParameter) == 0 {
+		return commonParameterString
+	}
 
 	// Sort specificParameter by Key
 	var keys = make([]string, 0)
